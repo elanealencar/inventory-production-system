@@ -34,13 +34,19 @@ export class ProductsController {
       const payload = createProductSchema.parse(req.body);
       const created = await service.create(payload);
       return res.status(201).json(created);
-    } catch (err) {
+    } catch (err: any) {
       if (err instanceof ZodError) {
         return res.status(400).json({ message: 'Validation error', issues: err.issues });
       }
-      // Unique constraint (code)
-      return res.status(400).json({ message: 'Could not create product' });
+
+      if (err?.code === 'P2002') {
+        return res.status(409).json({ message: 'Product code already exists' });
+      }
+
+      console.error(err);
+      return res.status(500).json({ message: 'Could not create product' });
     }
+
   }
 
   async update(req: Request, res: Response) {

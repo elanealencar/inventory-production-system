@@ -51,11 +51,17 @@ export class RawMaterialsController {
       const payload = updateRawMaterialSchema.parse(req.body);
       const updated = await service.update(id, payload);
       return res.json(updated);
-    } catch (err) {
+      } catch (err: any) {
       if (err instanceof ZodError) {
         return res.status(400).json({ message: 'Validation error', issues: err.issues });
       }
-      return res.status(400).json({ message: 'Could not update raw material' });
+
+      if (err?.code === 'P2002') {
+        return res.status(409).json({ message: 'Raw material code already exists' });
+      }
+
+      console.error(err);
+      return res.status(500).json({ message: 'Could not create raw material' });
     }
   }
 
