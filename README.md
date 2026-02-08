@@ -198,7 +198,7 @@ npm run dev
 
 ---
 
-👩‍💻 Autora
+## 👩‍💻 Autora
 
 Projeto desenvolvido como parte de um desafio técnico full stack, com foco em:
 - boas práticas
