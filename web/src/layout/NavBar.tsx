@@ -1,15 +1,19 @@
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/projedata-logo.png';
 
 const linkClass =
-  'px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition';
+  'px-3 py-2 font-medium hover:border-b-3 border-gray-500 transition';
 
-const activeClass = 'bg-gray-200';
+const activeClass = 'border-b-3 border-gray-500';
 
 export function Navbar() {
   return (
-    <header className="border-b">
-      <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
-        <h1 className="text-lg font-semibold">Inventory Production</h1>
+    <header className="border-b text-white text-md">
+      <div className="mx-auto px-4 py-3 flex items-center justify-between bg-[#0c0f3d]">
+        <div className='flex flex-row gap-4 items-center'>
+          <img src={logo} alt="Projedata Logo" className="h-11" />
+          <h1 className="text-2xl font-semibold mb-1">Inventory Production</h1>
+        </div>
 
         <nav className="flex gap-2">
           <NavLink to="/products" className={({ isActive }) => `${linkClass} ${isActive ? activeClass : ''}`}>
