@@ -31,7 +31,7 @@ export function Modal({ open, title, children, onClose }: ModalProps) {
           <h2 className="text-base font-semibold">{title}</h2>
           <button
             onClick={onClose}
-            className="rounded-lg px-2 py-1 text-sm hover:bg-gray-100"
+            className="rounded-lg px-2 py-1 text-sm hover:bg-gray-100 cursor-pointer"
             aria-label="Close modal"
           >
             ✕
