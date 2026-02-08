@@ -3,6 +3,7 @@ import { productsApi } from '../api/products.api';
 import { Modal } from '../components/Modal';
 import { Button, Card, Input, Label } from '../components/ui';
 import type { Product, ProductCreate, ProductUpdate } from '../types/product';
+import { BomEditor } from '../components/BomEditor';
 
 type Mode = 'create' | 'edit' | 'delete';
 
@@ -165,6 +166,9 @@ export function ProductsPage() {
       </Card>
 
       <Modal open={open} title={modalTitle} onClose={closeModal}>
+        {mode === 'edit' && selected && (
+          <BomEditor productId={selected.id} />
+        )}
         {mode === 'delete' ? (
           <div className="space-y-4">
             <p className="text-sm text-gray-700">
