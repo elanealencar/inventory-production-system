@@ -127,6 +127,8 @@ cd web
 npx cypress open
 ```
 
+--- 
+
 ## ▶️ Como executar o projeto localmente
 
 1️⃣ Subir o banco de dados
@@ -155,6 +157,8 @@ npm run dev
 
 - Aplicação: http://localhost:5173
 
+---
+
 ## 🧠 Decisões técnicas
 
 - Node.js + TypeScript: maior produtividade e segurança de tipos
@@ -162,6 +166,8 @@ npm run dev
 - Tailwind CSS: agilidade e consistência visual
 - Modais reutilizáveis: melhor UX e código organizado
 - Testes automatizados: garantia de qualidade e previsibilidade
+
+---
 
 ## 📦 Funcionalidades principais da interface
 
@@ -173,6 +179,25 @@ npm run dev
     - Quantidades sugeridas
     - Valor total
 
+---
+
+## 🖼️ Capturas de tela
+
+### Tela de Produtos
+![Products](./docs/screenshots/products.png)
+
+### Modal de criação de novos produtos
+![Modal](./docs/screenshots/products-modal.png)
+
+### Tela de matérias primas
+![Matérias primas](./docs/screenshots/raw-materials.png)
+
+
+### Sugestão de Produção
+![Suggestion](./docs/screenshots/suggestion.png)
+
+---
+
 👩‍💻 Autora
 
 Projeto desenvolvido como parte de um desafio técnico full stack, com foco em:
@@ -181,8 +206,7 @@ Projeto desenvolvido como parte de um desafio técnico full stack, com foco em:
 - clareza de regras de negócio
 - experiência do usuário
 
-Desenvolvido por: 
-Elane Alencar
-Linkedin: https://linkedin.com/in/elanealencar
-GitHub: https://github.com/elanealencar
-Portfólio pessoal: https://portfolio-elanealencar.vercel.app/
+Desenvolvido por: Elane Alencar
+- Linkedin: https://linkedin.com/in/elanealencar
+- GitHub: https://github.com/elanealencar
+- Portfólio pessoal: https://portfolio-elanealencar.vercel.app/
