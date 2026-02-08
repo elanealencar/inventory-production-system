@@ -1,8 +1,11 @@
 import { Router } from 'express';
 import { ProductsController } from '../controllers/products.controller';
+import { bomRouter } from './bom.routes';
 
 export const productsRouter = Router();
 const controller = new ProductsController();
+
+productsRouter.use('/:productId/bom', bomRouter);
 
 productsRouter.get('/', (req, res) => controller.list(req, res));
 productsRouter.get('/:id', (req, res) => controller.getById(req, res));
